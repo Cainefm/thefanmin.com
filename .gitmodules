@@ -1,3 +1,6 @@
 [submodule "myBlog/--depth=1"]
 	path = myBlog/--depth=1
 	url = https://github.com/forecho/hugo-theme-echo.git
+[submodule "themes/hugo-theme-bootstrap"]
+	path = themes/hugo-theme-bootstrap
+	url = https://github.com/razonyang/hugo-theme-bootstrap
