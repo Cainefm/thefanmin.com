@@ -101,3 +101,5 @@ ggplot(mpg, aes(displ, hwy)) +
 
 ![](/img/in-post/rmarkdown-testing/unnamed-chunk-1-1.png)
 
+![Old method by md](https://shiring.github.io/blogging/2016/12/04/diy_your_own_blog)
+

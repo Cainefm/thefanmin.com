@@ -1,0 +1,50 @@
+---
+title: Some interesting R packages - Broom
+author: FAN Min
+date: '2020-12-28'
+slug: []
+categories:
+  - R
+tags: []
+comment: yes
+description: ''
+reward: yes
+toc: yes
+---
+
+A package for extracting information from build-in statistical testing and models.
+<!--more-->
+
+## Summary
+Some build-in functions for statistical analysis is not user-friendly. In other words, the users like me are so lazy. For example, it is hard for extracting values from regression model. I used to write a function to extract. Now I found a well-designed package **broom** designing for model extraction.
+
+## Regression
+
+When conducting a regression model in R, the output is unstructural and hard to export.
+```{r}
+lm_model <- lm(data=iris,Sepal.Length~Sepal.Width)
+summary(lm_model)
+```
+
+Now, the following package **broom** can help to generate a data frame for exporting.
+
+```{r}
+library('broom')
+tidy(lm_model)
+```
+
+As above, the result was transformed into data.frame format.
+
+The other details can be exported by **augment()**
+
+```{r}
+head(augment(lm_model))
+```
+
+
+## Hypothesis testing
+```{r}
+db <- data.frame(value = 1: 100, group= rep(c("a","b"),50))
+ttest_db <-t.test(db$value~db$group)
+tidy(ttest_db)
+```
